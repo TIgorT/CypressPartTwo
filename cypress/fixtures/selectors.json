@@ -1,0 +1,20 @@
+{
+  "title": ".page-header__title",
+  "days": ".page-nav__day",
+  "film": ".movie",
+  "filmFirst": ".movie:first-child div [class='movie__description'] h2",
+  "filmSecond": ".movie:nth-child(2) div [class='movie__description'] h2",
+  "filmThird": ".movie:last-child div [class='movie__description'] h2",
+  "emailField": "[for='email'] .login__input",
+  "passwordField": "[for='pwd'] .login__input",
+  "theLogInButton": ".login__button",
+  "hallsManagement": "#hall-control .conf-step__header [class='conf-step__title']",
+  "configuration": "#hall-configuration .conf-step__header [class='conf-step__title']",
+  "priceConfiguration": "#price-configuration .conf-step__header [class='conf-step__title']",
+  "sessionGrid": "#grid-session .conf-step__header [class='conf-step__title']",
+  "openSales": "#start-sales .conf-step__header [class='conf-step__title']",
+  "movieTitles": ".conf-step__seances-movie-title",
+  "day": "a.page-nav__day:nth-of-type(7)",
+  "button": ".acceptin-button",
+  "proof": ".ticket__check-title"
+}

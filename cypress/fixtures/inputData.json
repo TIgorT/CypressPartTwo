@@ -1,0 +1,7 @@
+{
+  "validLogin": "qamid@qamid.ru",
+  "validPassword": "qamid",
+  "invalidLogin": "qamid@q.ru",
+  "invalidPassword": "654j75",
+  "sessionTime": "16:00"
+}
