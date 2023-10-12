@@ -1,5 +1,5 @@
-import selector from "../fixtures/selectors";
-import information from "../fixtures/inputData";
+import selector from "../../fixtures/selectors";
+import information from "../../fixtures/inputData";
 
 describe("Booking a movie in an accessible hall, the name of which you get from the admin panel", () => {
   beforeEach(() => {

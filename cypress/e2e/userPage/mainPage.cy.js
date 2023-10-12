@@ -1,4 +1,4 @@
-import selector from "../fixtures/selectors";
+import selector from "../../fixtures/selectors";
 
 describe("Visibility of the main page of the site", () => {
   beforeEach(() => {

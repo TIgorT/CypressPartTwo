@@ -1,5 +1,5 @@
-import selector from "../fixtures/selectors";
-import information from "../fixtures/inputData";
+import selector from "../../fixtures/selectors";
+import information from "../../fixtures/inputData";
 describe("Tests for admin authorization in the application go to the cinema", () => {
   beforeEach(() => {
     cy.visit("/admin");

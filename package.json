@@ -4,12 +4,41 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --record --key 75164e37-1e6b-4332-bac6-90139b9ada7d"
+    "test": "npx cypress run --record --key 75164e37-1e6b-4332-bac6-90139b9ada7d",
+    "test-userPage": "cypress run --record --key 75164e37-1e6b-4332-bac6-90139b9ada7d --group mainPage --spec cypress/e2e/userPage/mainPage.cy.js --ci-build-id 13",
+    "test-administrativePage1": "cypress run --record --key 75164e37-1e6b-4332-bac6-90139b9ada7d --group administrative --spec cypress/e2e/administrativePage/administrative.cy.js --ci-build-id 13",
+    "test-administrativePage2": "cypress run --record --key 75164e37-1e6b-4332-bac6-90139b9ada7d --group bookingAMovie --spec cypress/e2e/administrativePage/bookingAMovie.cy.js --ci-build-id 13",
+    "test-parallel": "run-p -c test-userPage test-administrativePage1 test-administrativePage2",
+    "test-userPage:chrome": "cypress run --record --browser chrome --group mainPage --spec cypress/e2e/userPage/mainPage.cy.js",
+    "test-administrativePage1:edge": "cypress run --record --browser edge --group administrative --spec cypress/e2e/administrativePage/administrative.cy.js",
+    "test-administrativePage2:electron": "cypress run --record --browser electron --group bookingAMovie --spec cypress/e2e/administrativePage/bookingAMovie.cy.js",
+    "test-parallel:b": "run-p -c test-userPage:chrome test-administrativePage1:edge test-administrativePage2:electron",
+    "test-userPage:c": "cypress run --record --browser chrome --group mainPage --spec cypress/e2e/userPage/mainPage.cy.js",
+    "test-administrativePage1:c": "cypress run --record --browser chrome --group administrative --spec cypress/e2e/administrativePage/administrative.cy.js",
+    "test-administrativePage2:c": "cypress run --record --browser chrome --group bookingAMovie --spec cypress/e2e/administrativePage/bookingAMovie.cy.js",
+    "test-parallel:chrome": "run-p -c test-userPage:c test-administrativePage1:c test-administrativePage2:c",
+    "test-userPage:e": "cypress run --record --browser edge --group mainPage --spec cypress/e2e/userPage/mainPage.cy.js",
+    "test-administrativePage1:e": "cypress run --record --browser edge --group administrative --spec cypress/e2e/administrativePage/administrative.cy.js",
+    "test-administrativePage2:e": "cypress run --record --browser edge --group bookingAMovie --spec cypress/e2e/administrativePage/bookingAMovie.cy.js",
+    "test-parallel:edge": "run-p -c test-userPage:e test-administrativePage1:e test-administrativePage2:e",
+    "test-userPage:el": "cypress run --record --browser electron --group mainPage --spec cypress/e2e/userPage/mainPage.cy.js",
+    "test-administrativePage1:el": "cypress run --record --browser electron --group administrative --spec cypress/e2e/administrativePage/administrative.cy.js",
+    "test-administrativePage2:el": "cypress run --record --browser electron --group bookingAMovie --spec cypress/e2e/administrativePage/bookingAMovie.cy.js",
+    "test-parallel:electron": "run-p -c test-userPage:el test-administrativePage1:el test-administrativePage2:el",
+    "test-administrativePage": "cypress run --record --browser chrome --group administrative --spec cypress/e2e/administrativePage/*",
+    "test-userPage:P": "cypress run --record --browser chrome --group userPage --spec cypress/e2e/userPage/*",
+    "test-parallel:P": "run-p -c test-administrativePage test-userPage:P"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
   "dependencies": {
-    "cypress": "^13.3.0"
+    "cypress": "^13.3.1",
+    "date": "^2.0.3",
+    "to": "^0.2.9",
+    "up": "^1.0.2"
   }
 }
